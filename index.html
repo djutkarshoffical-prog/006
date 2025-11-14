@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DESIGN_HUB_INDIA | 2006</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0f0f0f;color:white;}
+html{scroll-behavior:smooth;}
+.container{width:90%;max-width:1200px;margin:auto;}
+nav{display:flex;justify-content:space-between;padding:20px 0;align-items:center;}
+nav h2{color:#4df4ff;}
+nav a{color:white;text-decoration:none;margin-left:25px;font-weight:600;transition:0.3s;}
+nav a:hover{color:#4df4ff;}
+
+.hero{height:40vh;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;animation:fadeIn 2s;}
+.hero-text h1{font-size:48px;line-height:1.2;}
+.hero-text span{color:#4df4ff;}
+.hero-text p{margin:15px 0;font-size:18px;color:#ccc;}
+.btn{background:#4df4ff;padding:12px 25px;border:none;color:black;font-weight:bold;border-radius:6px;cursor:pointer;text-decoration:none;transition:0.3s;}
+.btn:hover{transform:scale(1.08);}
+
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+
+.profile-img{width:320px;border-radius:50%;border:5px solid #4df4ff;animation:updown 3s infinite;}
+@keyframes updown{0%{transform:translateY(0);}50%{transform:translateY(-12px);}100%{transform:translateY(0);}}
+
+.section{padding:70px 0;text-align:center;}
+.section h2{font-size:32px;margin-bottom:30px;color:#4df4ff;}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+
+.card{background:#1a1a1a;padding:25px;border-radius:10px;border:1px solid #222;transition:0.4s;}
+.card:hover{transform:translateY(-10px);border-color:#4df4ff;box-shadow:0 0 15px #4df4ff;}
+
+.portfolio-img{width:100%;border-radius:10px;transition:0.4s;}
+.portfolio-img:hover{transform:scale(1.05);}
+
+footer{text-align:center;padding:20px 0;margin-top:30px;border-top:1px solid #222;color:#888;}
+
+
+/* ---------------------------------- */
+/*        RESPONSIVE DESIGN FIX       */
+/* ---------------------------------- */
+
+@media (max-width: 992px) {
+  .hero {
+    height: auto;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .profile-img {
+    width: 250px;
+  }
+
+  nav h2 {
+    font-size: 22px;
+  }
+}
+
+/* Portfolio Grid Fix */
+/* Mobile: 2 cards per row */
+@media (max-width: 768px) {
+  #portfolio .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important;
+  }
+}
+
+/* Laptop/Desktop: 4 cards in one row */
+@media (min-width: 769px) {
+  #portfolio .grid {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+
+  nav {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+
+  nav a {
+    margin-left: 0;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 180px !important;
+    margin-top: 20px;
+  }
+
+  .section h2 {
+    font-size: 26px;
+  }
+
+    .card {
+    padding: 18px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<nav class="container">
+<h2>DESIGN_HUB_INDIA</h2>
+<div>
+<a href="#services">Services</a>
+<a href="#portfolio">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero container">
+<div class="hero-text">
+<h1>I Build <span>Websites & Brands</span><br>That Convert 🚀</h1>
+<p>Web Development • UI/UX • Logo & Poster Design • Hosting</p>
+<a href="#contact" class="btn">Get Quote</a>
+</div>
+</section>
+
+<section class="section" id="about">
+<h2>About Me</h2>
+<div class="container grid" style="grid-template-columns: 1fr 2fr; align-items:center; text-align:left;">
+<div>
+<img src="images/utkarsh.jpg" class="profile-img" style="width:200px; border:5px solid #4df4ff;">
+</div>
+<div style="padding-left:20px; color:#ccc;">
+<h3>MR. UTKARSH DHARMIK 😎</h3>
+<p>Hi! I’m a Web Developer & Designer. I create modern websites, branding, and UI/UX designs that help businesses grow online. Passionate about clean code and creative design.</p>
+</div>
+</div>
+</section>
+
+<section class="section" id="services">
+<h2>Services I Offer</h2>
+<div class="container grid">
+<div class="card"><h3>Web Development</h3><p>Portfolio, Business, Landing Pages</p></div>
+<div class="card"><h3>Logo Design</h3><p>Brand identity creation</p></div>
+<div class="card"><h3>Poster Design</h3><p>Social media posters & banners</p></div>
+<div class="card"><h3>Hosting & SEO</h3><p>Deploy + Basic SEO</p></div>
+</div>
+</section>
+
+<section class="section" id="portfolio">
+<h2>My Recent Work</h2>
+<div class="container grid">
+<div class="card"><img src="https://assets.materialup.com/uploads/5d6b84b8-4f2b-4d7a-b1e1-0c3f4dc7f1a6/preview.png" class="portfolio-img"><h3>Business Website</h3></div>
+
+<div class="card">
+<a href="https://www.instagram.com/p/DQ4j6-piLhf/?igsh=Mmo2dnF6aHI4cHNm" target="_blank">
+<img src="images/portfulio.jpg" class="portfolio-img">
+</a>
+<h3>Portfolio Website</h3>
+</div>
+
+<div class="card">
+<a href="https://www.instagram.com/p/DQ4j6-piLhf/?igsh=Mmo2dnF6aHI4cHNm" target="_blank">
+<img src="images/e-commerce.jpg" class="portfolio-img">
+</a>
+<h3>E-Commerce UI</h3>
+</div>
+
+<div class="card"><img src="https://cdn.dribbble.com/users/108183/screenshots/15899813/media/0c4c6eebdb5c1f87b9ddc3f3a760c686.png" class="portfolio-img"><h3>Branding & Logo</h3></div>
+</div>
+</section>
+
+<section class="section" id="contact">
+<h2>Let's Build Your Website</h2>
+<p>Tell me your idea — I’ll build it live 😎</p><br>
+
+<a href="https://wa.me/918087412366?text=Hi%20I%20want%20a%20website%20built%20by%20you.%20Please%20share%20details!" class="btn">WhatsApp Me</a>
+
+<a href="https://www.instagram.com/direct/new/?username=the_design_plug_006" class="btn"
+onclick="navigator.clipboard.writeText('Hi I want a website built by you. Please share details!'); alert('Message copied! Now paste in Instagram chat.')">
+Instagram DM
+</a>
+
+<p style="margin-top:20px;color:#aaa;">Pricing starts from ₹500 | Fast delivery + revisions</p>
+</section>
+
+<footer>
+© 2025 DESIGN_HUB_INDIA — Built by DESIGN_HUB_INDIA
+</footer>
+
+</body>
+</html>
